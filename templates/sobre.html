@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sobre</title>
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='logo.png') }}"
+      sizes="16x16 32x32 48x48"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Sobre</h1>
+    <p>Esta é a página sobre a minha aplicação web.</p>
+    <h2>Posts</h2>
+    <ul>
+      {% for post in posts %}
+      <li>id: {{ post.id }}</li>
+      <li>x: {{ post.x }}</li>
+      <li>y: {{ post.y }}</li>
+      <li>z: {{ post.z }}</li>
+      <li>r: {{ post.r }}</li>
+      <br /><br />
+      {% endfor %}
+    </ul>
+  </body>
+</html>
